@@ -1,153 +1,113 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
-
-/* Reset some basic styles */
-body, h1, h2, p, nav, footer {
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Apply general styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
 }
 
-/* Header styles */
 header {
     background-color: #333;
-    color: #fff;
-    padding: 1em 0;
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
-header h1 {
-    font-family: 'Open Sans', sans-serif;
-    margin-bottom: 0.5em;
-}
-
-/* Navigation styles */
 nav {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 1em;
+    background-color: #444;
 }
 
 nav a {
-    color: #fff;
+    color: white;
+    padding: 10px 20px;
     text-decoration: none;
-    padding: 0.5em 1em;
-    background-color: #444;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
 }
 
 nav a:hover {
     background-color: #555;
 }
 
-/* Main content styles */
 main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1em;
-    background-color: #fff;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.card {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 1em;
-    margin-bottom: 1.5em;
-}
-
-.card img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-.card h2 {
-    font-family: 'Open Sans', sans-serif;
-    margin-bottom: 0.5em;
-}
-
-/* Footer styles */
 footer {
-    background-color: #333;
-    color: #fff;
     text-align: center;
-    padding: 1em 0;
-    margin-top: 1em;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
 }
 
 footer p {
-    margin: 0.5em 0;
+    margin: 0;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .card {
-        grid-template-columns: 1fr;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
-    nav a {
-        margin-bottom: 0.5em;
-    }
+/* Section Styles */
+.card, .sidebar {
+    overflow: hidden;
+    padding: 10px;
 }
-/* Existing styles ... */
 
-/* Main content styles */
+.card img, .sidebar img {
+    float: right;
+    max-width: 150px;
+    height: auto;
+    margin: 0 0 10px 10px;
+    border-radius: 5px;
+}
+
+.card p, .sidebar p {
+    text-align: justify;
+}
+
+.card h2, .sidebar h2 {
+    margin-top: 0;
+}
+
+/* Flex and Grid Layouts */
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
 main {
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 1em;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1em;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    grid-template-columns: 3fr 1fr; /* Makes section 1 larger */
+    gap: 40px; /* Adds space between sections */
 }
 
-/* Section 1 and Section 2 styling */
-.card {
-    background-color: #f9f9f9;
-    padding: 1em;
-    border-radius: 5px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-.card img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-.card h2 {
-    font-family: 'Open Sans', sans-serif;
-    margin-bottom: 0.5em;
-}
-
-/* Sidebar specific styles (Section 2) */
-.sidebar {
-    background-color: #eaeaea;
-    padding: 1em;
-    border-radius: 5px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive design for smaller screens */
+/* Responsive Design */
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
     }
+}
+/* Sidebar and List Styles */
+.sidebar {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.sidebar ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar li:last-child {
+    margin-bottom: 0;
 }
