@@ -1,0 +1,33 @@
+@media (min-width: 768px) {
+    nav ul {
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+
+    main {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .temples-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+        gap: 1rem; /* Space between images */
+        padding: 1rem; /* Add padding around the gallery */
+    }
+
+    figure {
+        background-color: #fff;
+        padding: 1.5rem;
+        border: none; /* No border */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Keep shadow for depth */
+        text-align: center;
+    }
+
+    figure img {
+        width: 100%; /* Ensure the image fills the container */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 6px; /* Match rounded corners */
+    }
+}
