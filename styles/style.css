@@ -1,3 +1,12 @@
+:root {
+    --primary-color: #FF521B;
+    --secondary-color: #FC9E4F;
+    --background-color: #F2F3AE;
+    --font-color: #020122;
+    --accent-color: #EDD382;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,9 +14,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 .container {
