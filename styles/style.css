@@ -1,63 +1,99 @@
-/* Global Styles */
-:root {
-    --primary-color: #ff521b; /* Example color */
-    --secondary-color: #f2f3ae;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
     color: #333;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: var(--primary-color);
-    color: white;
-}
-
-h1, h2 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-}
-/* Hero Image */
-#hero img {
+.container {
     width: 100%;
-    height: auto;
-}
-
-/* Weather Section */
-#weather {
+    background-color: #e60000; /* Red background for the top part */
+    color: white;
     padding: 20px;
-    background-color: var(--secondary-color);
+    text-align: center;
 }
 
-#weather h2::after {
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.hero {
+    width: 50%;
+    height: 400px; /* Ensure the hero section has a height */
+    overflow: hidden; /* To avoid image overflow */
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills container without distortion */
+}
+
+.data, .weather {
+    width: 45%;
+}
+
+.data h2, .weather h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+.weather-details p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0; /* Increased padding for larger footer */
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.2em; /* Increased font size */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero {
+        width: 100%;
+        height: auto; /* Adjust hero section height for small screens */
+    }
+    .hero img {
+        object-fit: cover; /* Ensure image remains properly resized */
+    }
+}
+
+/* Pseudo-element for the weather icon in larger view */
+.weather h2::after {
     content: " ⛅";
     font-size: 1.5em;
-}
-
-#weather p {
-    font-size: 1.2em;
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    #hero img {
-        width: 100%;
-    }
-
-    #weather p {
-        font-size: 1em;
-    }
-}
-
-@media (min-width: 601px) and (max-width: 1200px) {
-    #hero img {
-        width: 80%;
-        margin: 0 auto;
-    }
 }

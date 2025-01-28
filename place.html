@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta name="description" content="Lubango cristo rei page">
+    <meta name="description" content="Angola">
     <meta name="author" content="Alessandro Cipriano">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,31 +10,55 @@
     <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/script.js" defer></script>
 </head>
-<body>
-    <header>
-    <h1>Lubango's Cristo Rei</h1>
-    </header>
-    <main>
-<!-- Hero Section with Responsive Image -->
-    <section id="hero">
-    <picture>
-        <source srcset="images/landmark.jpg" media="(max-width: 600px)">
-        <source srcset="images/landmark.jpgp" media="(max-width: 1200px)">
-        <img src="images/landmark.jpg" alt="Place Image">
-    </picture>
-    </section>
 
-<!-- Weather Section -->
-    <section id="weather">
-    <h2>Weather ⛅</h2>
-    <p>Temperature: <span id="temperature">18°C</span></p>
-    <p>Wind Speed: <span id="wind-speed">15 km/h</span></p>
-    <p>Windchill: <span id="windchill">N/A</span></p>
-    </section>
-    </main>
-<footer>
-    <p>&copy; <span id="currentyear"></span> Alessandro Cipriano, Angola</p>
-    <p id="lastModified"></p>
-</footer>
+<body>
+<div class="container">
+    <header>
+        <h1>Angola</h1>
+    </header>
+
+    <div class="main-content">
+        <div class="hero">
+            <img src="/images/landmark.webp" alt="Angola's Landscape"
+                 srcset="/images/landmark.webp 500w, /images/landmark.webp 1000w, /images/landmark.webp 1500w">
+        </div>
+
+        <div class="data">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 1,246,700 sq km</li>
+                <li><strong>Population:</strong> 36,000,000 (approx.)</li>
+                <li><strong>Capital:</strong> Luanda</li>
+                <li><strong>Languages:</strong> Portuguese (official), Umbundu, Kimbundu, Kikongo</li>
+                <li><strong>Currency:</strong> Kwanza (AOA)</li>
+                <li><strong>Time Zone:</strong> UTC +1</li>
+                <li><strong>Calling Code:</strong> +244</li>
+                <li><strong>Internet TLD:</strong> .ao</li>
+            </ul>
+        </div>
+
+        <div class="weather">
+            <h2>Weather</h2>
+            <div class="weather-details">
+                <p><strong>Temperature:</strong> 28°C</p>
+                <p><strong>Conditions:</strong> Partly Cloudy</p>
+                <p><strong>Wind:</strong> 15 km/h</p>
+                <p><strong>Wind Chill:</strong> <span class="windchill">Loading...</span></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Angola. Last Modified: <span id="last-modified"></span></p>
+    </footer>
+
+</div>
+
+<script>
+    // Display current year and last modified date
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = document.lastModified;
+</script>
 </body>
+
 </html>
