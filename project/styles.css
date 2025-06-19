@@ -1,0 +1,75 @@
+/* CSS Variables for Color Schema */
+:root {
+    --primary: #4a6fa5;    /* Soft blue */
+    --secondary: #ff7e5f;  /* Coral orange */
+    --background: #f9f5f0; /* Cream */
+    --text: #333333;      /* Dark gray */
+  }
+  
+  /* Base Styles */
+  body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--background);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Typography */
+  h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary);
+  }
+  
+  h1 {
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 10px;
+  }
+  
+  .montserrat-example {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--primary);
+  }
+  
+  .opensans-example {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  /* Color Swatches */
+  .color-swatch {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+    border-radius: 8px;
+    font-size: 12px;
+  }
+  
+  .primary {
+    background-color: var(--primary);
+  }
+  
+  .secondary {
+    background-color: var(--secondary);
+  }
+  
+  .background {
+    background-color: var(--background);
+    color: var(--text);
+    border: 1px solid #ccc;
+  }
+  
+  .text {
+    background-color: var(--text);
+  }
+  
+  /* Layout */
+  section {
+    margin-bottom: 30px;
+  }
