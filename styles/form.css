@@ -1,0 +1,106 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Form Styles */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  
+  select, input[type="date"], input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* Rating Stars */
+  .rating {
+    display: flex;
+    gap: 10px;
+    font-size: 24px;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    cursor: pointer;
+    color: #ccc;
+  }
+  
+  .rating input:checked ~ label {
+    color: #ffc107;
+  }
+  
+  /* Checkboxes */
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .features label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* Submit Button */
+  input[type="submit"] {
+    background-color: #4a6fa5;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3a5a80;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    body {
+      padding: 15px;
+    }
+    
+    .rating {
+      font-size: 20px;
+    }
+  }
